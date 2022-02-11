@@ -1,0 +1,16 @@
+{% assign product_protect = block.settings.product %}
+
+{% render "protections", product_to_protect: product_protect %}
+
+{% schema %}
+{
+    "name": "Protection Plan",
+    "target": "section",
+    "settings": [
+        { "type": "product", "id": "product", "label": "product", "autofill": true },
+        { "type": "color", "id": "color_police", "label": "color police", "default": "#000000" },
+        { "type": "color", "id": "color_block_pressed", "label": "color block pressed", "default": "#364670" },
+        { "type": "color", "id": "color_block", "label": "color block ", "default": "#FFFFFF" }
+    ]
+}
+{% endschema %}
